@@ -2,7 +2,7 @@
 #define EJERCICIOCONTODO_GENERARDATOSALEATORIOS_H
 
 void inicializarSRAND();
-char *generarUsuario();
+char *generarTexto(int longitud);
 char *generarCiudad();
 int generarEdad();
 

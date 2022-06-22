@@ -1,0 +1,6 @@
+#ifndef EJERCICIOCONTODO_CACHE_H
+#define EJERCICIOCONTODO_CACHE_H
+
+
+
+#endif

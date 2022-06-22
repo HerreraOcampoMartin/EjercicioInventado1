@@ -5,8 +5,8 @@ Hacer un programa que contenga 500 personas que contienen los datos:
 - Ubicación (aleatoria de una lista predefinida)
 ## Hacer:
 - Un sistema de hashing, con 128 clases.
-- Un sistema de caché, que contenga las 128.
-- Mostrar los usuarios de una clase en particular. El acceso a esta página la guarda 
-automáticamente en la caché
-- Tiene que ser posible eliminar algún usuario
-- Liberar los usuarios cuando termine el programa para no ocupar memoria.
+- Una lista de categorías que contienen 20 publicaciones cada una. Cada publicación tiene un texto e id (número único).
+- Un sistema de caché, que contenga las categorías.
+- Acceder al contenido de una categoría. El acceso a esta categoría la guarda 
+automáticamente en la caché.
+- Liberar los usuarios y las publicaciones cuando termine el programa para no ocupar memoria.

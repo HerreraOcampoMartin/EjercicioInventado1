@@ -10,7 +10,7 @@ int main() {
     inicializarTabla(tabla);
 
     for (int i = 0; i < __CANT_USUARIOS; i++) {
-        char *u = generarUsuario();
+        char *u = generarTexto(6); // El usuario tiene una longitud de 6 carácteres
         char *c = generarCiudad();
         int e = generarEdad();
         agregarUsuario(tabla, crearUsuario(u, c, e));

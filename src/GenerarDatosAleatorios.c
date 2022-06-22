@@ -15,11 +15,11 @@ void inicializarSRAND(){
     srand(time(0));
 }
 
-char *generarUsuario(){
-    int longUsuario = 6, i;
-    char *usuario = (char*) malloc(sizeof (char) * (longUsuario+1));
+char *generarTexto(int longitud){
+    int  i;
+    char *usuario = (char*) malloc(sizeof (char) * (longitud+1));
 
-    for (i = 0; i < longUsuario; i++) {
+    for (i = 0; i < longitud; i++) {
         char letra = rand() % (__FIN_CARACTERES__ - __INICIO_CARACTERES__) + __INICIO_CARACTERES__;
         usuario[i] = letra;
     }
