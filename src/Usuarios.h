@@ -18,12 +18,10 @@ void inicializarTabla(ListaUsuarios **tabla);
 ListaUsuarios *crearListaUsuarios();
 Usuario *crearUsuario(char *usuario, char *ciudad, int edad);
 void agregarUsuario(ListaUsuarios **tabla, Usuario *nuevo);
-void eliminarUsuario(ListaUsuarios **tabla, char *usuario);
 void imprimirLista(ListaUsuarios **tabla, int numPagina);
-int verificarQueUsuarioNoSeRepita(ListaUsuarios **tabla, char *nuevo);
 
 void liberarLista(ListaUsuarios *lista);
-void liberarTabla(ListaUsuarios **tabla);
+void liberarTablaUsuarios(ListaUsuarios **tabla);
 
 
 #endif

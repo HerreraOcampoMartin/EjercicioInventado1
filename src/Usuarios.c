@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int hash (char *usuario){
+int dispersar (char *usuario){
     int suma = 0;
 
     for(int i = 0; i < strlen(usuario); i++){
@@ -50,35 +50,10 @@ Usuario *crearUsuario(char *usuario, char *ciudad, int edad){
 }
 
 void agregarUsuario(ListaUsuarios **tabla, Usuario *nuevo){
-    int clase = hash(nuevo->usuario);
+    int clase = dispersar(nuevo->usuario);
     nuevo->siguiente = tabla[clase]->primero;
     tabla[clase]->primero = nuevo;
     tabla[clase]->tam++;
-}
-
-void eliminarUsuario(ListaUsuarios **tabla, char *usuario){
-    int clase = hash(usuario);
-
-    Usuario *act = tabla[clase]->primero;
-    Usuario *ant = act;
-
-    while(act != NULL && strcmp(act->usuario, usuario) != 0){
-        ant = act;
-        act = act->siguiente;
-    }
-
-    if(act == NULL){
-        return;
-    }
-
-    if(act == ant){
-        tabla[clase]->primero = act->siguiente;
-        free(act);
-    }else {
-        ant->siguiente = act->siguiente;
-        free(act);
-    }
-    tabla[clase]->tam--;
 }
 
 void imprimirLista(ListaUsuarios **tabla, int numPagina){
@@ -108,7 +83,7 @@ void liberarLista(ListaUsuarios *lista){
     free(lista);
 }
 
-void liberarTabla(ListaUsuarios **tabla){
+void liberarTablaUsuarios(ListaUsuarios **tabla){
     for (int i = 0; i < __B__; i++) {
         liberarLista(tabla[i]);
     }
